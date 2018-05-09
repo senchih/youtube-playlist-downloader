@@ -1,21 +1,30 @@
 # youtube-playlist-downloader
 A Python CLI utility to download an entire playlist from YouTube.
-By default it downloads the videos from the [Berkeley Deep Reinforcement Learning class CS294](https://www.youtube.com/playlist?list=PLkFD6_40KJIwTmSbCv9OVJB3YaO4sFwkX).
+By default it downloads the videos from a youtube playlist.
 
 To run, clone this repository into an empty directory:
- `git clone https://github.com/svass/youtube-playlist-downloader.git`
+ `git clone https://github.com/senchih/youtube-playlist-downloader.git`
  
-Then install the one dependency:
+Then install the dependencies:
  `pip install pytube`
+ `pip install progressbar`
  
 Finally run the script:
  `python playlist-downloader.py`
  
-Optionally specify a playlist url to download:
- `python playlist-downloader.py -p https://www.youtube.com/playlist?list=PLBmH8k4EW7GJ-tsTXJLOKQuNYXpRu8mjS`
+Specify a playlist url:
+ `python playlist-downloader.py -p https://www.youtube.com/playlist?list=UUi9wbhjrZ4nTIHgZ0r31v8g`
  
-And/or a destination directory to save the videos in:
- `python playlist-downloader.py -d ~/corgi_videos -p https://www.youtube.com/playlist?list=PLBmH8k4EW7GJ-tsTXJLOKQuNYXpRu8mjS`
+Destination directory:
+ `python playlist-downloader.py -d ~/Desktop/`
+
+Download the audio only:
+ `python playlist-downloader.py -a`
+
+Download the files without checking videos number:
+ `python playlist-downloader.py -y`
  
 The script checks if the videos from the playlist are already in the destination directory.
 This means you can re-run the script and only download the newly uploaded content.
+
+(This is forked from https://github.com/svass/youtube-playlist-downloader.git)
